@@ -1,0 +1,39 @@
+{
+  "name": "michalper/salesforce_rest_api",
+  "description": "Unofficial SalesForce REST API Client",
+  "homepage": "https://github.com/michalper/salesforce_rest_api",
+  "license": "GNU",
+  "authors": [
+    {
+      "name": "Michał Per",
+      "email": "michal.per@encja.com",
+      "homepage": "https://github.com/michalper",
+      "role": "Head Integration Developer"
+    }
+  ],
+  "support": {
+    "email": "michal.per@encja.com"
+  },
+  "keywords": [
+    "salesforce",
+    "sales",
+    "force",
+    "force.com"
+  ],
+  "require": {
+    "itav/serializer": "^1.3",
+    "michalper/tools": "^0.1.0",
+    "guzzlehttp/guzzle": "^6.2"
+  },
+  "require-dev": {
+  },
+  "type": "library",
+  "autoload": {
+    "psr-0": {
+      "SalesForceClient": "lib/"
+    },
+    "psr-4": {
+      "SalesForceClient\\": "lib/SalesForceClient/"
+    }
+  }
+}
