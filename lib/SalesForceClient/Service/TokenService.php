@@ -5,7 +5,7 @@ namespace SalesForceClient\Service;
 use GuzzleHttp\Client;
 use Itav\Component\Serializer\Serializer;
 use SalesForceClient\Model\AuthorizationModel;
-use SalesForceClient\Model\Nested\AuthorizationResponseModel;
+use SalesForceClient\Model\Response\AuthorizationResponseModel;
 
 /**
  * Class TokenService

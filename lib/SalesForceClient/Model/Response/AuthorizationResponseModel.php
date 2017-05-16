@@ -1,6 +1,6 @@
 <?php
 
-namespace SalesForceClient\Model\Nested;
+namespace SalesForceClient\Model\Response;
 
 /**
  * Class AuthorizationResponseModel

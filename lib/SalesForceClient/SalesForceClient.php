@@ -5,6 +5,7 @@ namespace SalesForceClient;
 use Itav\Component\Serializer\Serializer;
 use SalesForceClient\Model\AuthorizationModel;
 use SalesForceClient\Service\ContactService;
+use SalesForceClient\Service\QueryService;
 use SalesForceClient\Service\Service;
 
 /**
@@ -29,6 +30,11 @@ class SalesForceClient
     public $contact;
 
     /**
+     * @var QueryService
+     */
+    public $query;
+
+    /**
      * ContactuallyClient constructor.
      */
     public function __construct()
@@ -36,6 +42,7 @@ class SalesForceClient
         $this->service = new Service();
         $this->serializer = new Serializer();
         $this->contact = new ContactService($this->service, $this->serializer);
+        $this->query = new QueryService($this->service, $this->serializer);
     }
 
     /**

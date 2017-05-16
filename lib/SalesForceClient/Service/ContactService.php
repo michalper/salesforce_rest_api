@@ -4,7 +4,7 @@ namespace SalesForceClient\Service;
 
 use Itav\Component\Serializer\Serializer;
 use SalesForceClient\Model\ContactModel;
-use SalesForceClient\Model\ResponseModel;
+use SalesForceClient\Model\Response\ResponseModel;
 
 /**
  * Class ContactService
@@ -103,4 +103,6 @@ class ContactService implements InterfaceService
 
         return true;
     }
+
+
 }
