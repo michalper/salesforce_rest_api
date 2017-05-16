@@ -1,6 +1,6 @@
 <?php
 
-namespace SalesForceClient\Model;
+namespace SalesForceClient\Model\Response;
 
 /**
  * Class ErrorResponseModel
