@@ -52,4 +52,25 @@ class QueryService implements InterfaceService
         }
         return false;
     }
+
+    /**
+     * @param $queryNextRecordsUrl
+     * @return bool|mixed
+     * @throws \Exception
+     */
+    public function next($queryNextRecordsUrl)
+    {
+        if (!$queryNextRecordsUrl) {
+            throw new \Exception('Query next records url is missing.');
+        }
+
+        $ret = $this->service
+            ->setRequestMethod(Service::REQUEST_METHOD_GET)
+            ->request('query' . $queryNextRecordsUrl);
+
+        if ($data = json_decode($ret->getBody()->getContents(), true)) {
+            return $this->serializer->denormalize($data, QueryResponseModel::class);
+        }
+        return false;
+    }
 }
