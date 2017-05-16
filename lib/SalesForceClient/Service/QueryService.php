@@ -55,7 +55,7 @@ class QueryService implements InterfaceService
 
     /**
      * @param $queryNextRecordsUrl
-     * @return bool|mixed
+     * @return bool|QueryResponseModel
      * @throws \Exception
      */
     public function next($queryNextRecordsUrl)

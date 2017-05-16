@@ -42,9 +42,9 @@ class QueryModel
      */
     private $fromStatement;
     /**
-     * @var array
+     * @var string
      */
-    private $whereFields = [];
+    private $whereStatement;
 
     /**
      * @param int $page
@@ -117,23 +117,12 @@ class QueryModel
     }
 
     /**
-     * @param string $whereFields
+     * @param string $whereStatement
      * @return QueryModel
      */
-    public function setWhereFields($whereFields)
+    public function setWhereStatement($whereStatement)
     {
-        $this->whereFields = $whereFields;
-        return $this;
-    }
-
-    /**
-     * @param string $key
-     * @param string $value
-     * @return QueryModel
-     */
-    public function addWhereFields($key, $value)
-    {
-        $this->whereFields[$key] = $value;
+        $this->whereStatement = $whereStatement;
         return $this;
     }
 
@@ -142,13 +131,8 @@ class QueryModel
      */
     public function getQuery()
     {
-        $where = '';
-        foreach ($this->whereFields as $key => $value) {
-            $where .= ' AND ' . $key . ' = ' . $value;
-        }
-
         $fields = implode(', ', $this->selectFields);
-        $sql = 'SELECT ' . $fields . ' FROM ' . $this->fromStatement . ' LIMIT 10' ;
+        $sql = 'SELECT ' . $fields . ' FROM ' . $this->fromStatement . $this->whereStatement ;
 
         return $sql;
 
