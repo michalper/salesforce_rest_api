@@ -2,6 +2,8 @@
 
 namespace SalesForceClient\Model;
 
+use SalesForceClient\Model\Nested\AddressModel;
+
 /**
  * Class LeadModel
  * @package SalesForceClient\Model
@@ -99,7 +101,7 @@ class LeadModel
     private $GeocodeAccuracy;
 
     /**
-     * @var string
+     * @var AddressModel
      */
     private $Address;
 
@@ -628,7 +630,7 @@ class LeadModel
     }
 
     /**
-     * @return string
+     * @return AddressModel
      */
     public function getAddress()
     {
@@ -636,7 +638,7 @@ class LeadModel
     }
 
     /**
-     * @param string $Address
+     * @param AddressModel $Address
      * @return LeadModel
      */
     public function setAddress($Address)
