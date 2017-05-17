@@ -132,7 +132,7 @@ class QueryModel
     public function getQuery()
     {
         $fields = implode(', ', $this->selectFields);
-        $sql = 'SELECT ' . $fields . ' FROM ' . $this->fromStatement . $this->whereStatement ;
+        $sql = 'SELECT ' . $fields . ' FROM ' . $this->fromStatement . ' ' . $this->whereStatement;
 
         return $sql;
 

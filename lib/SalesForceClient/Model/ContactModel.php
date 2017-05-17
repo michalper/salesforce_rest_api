@@ -23,7 +23,7 @@ class ContactModel
     /**
      * @var boolean
      */
-    private $isDeleted;
+    private $IsDeleted;
 
     /**
      * @var string
@@ -33,7 +33,7 @@ class ContactModel
     /**
      * @var string
      */
-    private $accountId;
+    private $AccountId;
 
     /**
      * @var string
@@ -354,18 +354,18 @@ class ContactModel
     /**
      * @return bool
      */
-    public function isDeleted()
+    public function IsDeleted()
     {
-        return $this->isDeleted;
+        return $this->IsDeleted;
     }
 
     /**
-     * @param bool $isDeleted
+     * @param bool $IsDeleted
      * @return ContactModel
      */
-    public function setIsDeleted($isDeleted)
+    public function setIsDeleted($IsDeleted)
     {
-        $this->isDeleted = $isDeleted;
+        $this->IsDeleted = $IsDeleted;
         return $this;
     }
 
@@ -392,16 +392,16 @@ class ContactModel
      */
     public function getAccountId()
     {
-        return $this->accountId;
+        return $this->AccountId;
     }
 
     /**
-     * @param string $accountId
+     * @param string $AccountId
      * @return ContactModel
      */
-    public function setAccountId($accountId)
+    public function setAccountId($AccountId)
     {
-        $this->accountId = $accountId;
+        $this->AccountId = $AccountId;
         return $this;
     }
 
